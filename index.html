@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="scoreboard">
+      <div class="score">
+          <span class="player">X</span>
+          <span class="separator">-</span>
+          <span id="scoreX">0</span>
+      </div>
+      <div class="score">
+          <span class="player">O</span>
+          <span class="separator">-</span>
+          <span id="scoreO">0</span>
+      </div>
+  </div>
+
+  <div class="board">
+      <div class="cell" onclick="makeMove(0)"></div>
+      <div class="cell" onclick="makeMove(1)"></div>
+      <div class="cell" onclick="makeMove(2)"></div>
+      <div class="cell" onclick="makeMove(3)"></div>
+      <div class="cell" onclick="makeMove(4)"></div>
+      <div class="cell" onclick="makeMove(5)"></div>
+      <div class="cell" onclick="makeMove(6)"></div>
+      <div class="cell" onclick="makeMove(7)"></div>
+      <div class="cell" onclick="makeMove(8)"></div>
+  </div>
+
+  <div id="winner-message"></div>
+
+  <button class="reset-button" onclick="resetGame()">Reset Game</button>
+    
+
+  <div id="winner-popup" class="modal">
+      <div class="modal-content">
+          <span id="winner-text"></span>
+      </div>
+  </div>
+
+  <div id="draw-popup" class="modal">
+      <div class="modal-content">
+          <span id="draw-text">It's a draw!</span>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
